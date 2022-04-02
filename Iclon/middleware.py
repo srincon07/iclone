@@ -1,8 +1,7 @@
-"""Iclon middleware catalog."""
-
 # Django
 from django.shortcuts import redirect
 from django.urls import reverse
+
 
 class ProfileCompletionMiddleware:
     """Profile completion middleware.

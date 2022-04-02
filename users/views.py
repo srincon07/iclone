@@ -1,5 +1,3 @@
-"""Users views."""
-
 # Django
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth import login, views as auth_views
@@ -45,6 +43,7 @@ class SignupView(FormView):
         form.save()
         return super().form_valid(form)
 
+
 class UpdateProfileView(LoginRequiredMixin, UpdateView):
     """Update profile view."""
 
@@ -61,12 +60,15 @@ class UpdateProfileView(LoginRequiredMixin, UpdateView):
         username = self.object.user.username
         return reverse('users:detail', kwargs={'username': username})
 
+
 class LoginView(auth_views.LoginView):
     """Login View."""
 
     template_name = 'users/login.html'
 
+
 class LogoutView(LoginRequiredMixin, auth_views.LogoutView):
     """Logout view."""
 
     template_name = 'users/logged_out.html'
+    
