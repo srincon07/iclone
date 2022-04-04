@@ -1,11 +1,10 @@
-"""User forms."""
-
 # Django
 from django import forms
 
 # Models
 from django.contrib.auth.models import User
 from users.models import Profile
+
 
 class SignupForm(forms.Form):
     """Sign up form."""
@@ -67,3 +66,4 @@ class ProfileForm(forms.Form):
     biography = forms.CharField(max_length=500, required=False)
     phone_number = forms.CharField(max_length=20, required=False)
     picture = forms.ImageField()
+    
