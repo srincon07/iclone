@@ -81,6 +81,9 @@ celerybeat-schedule
 
 # dotenv
 .env
+.env.dev
+.env.prod
+.env.prod.db
 
 # virtualenv
 .venv
@@ -103,6 +106,7 @@ ENV/
 .DS_Store
 *.sqlite3
 media/
+mediafiles/
 *.pyc
 *.db
 *.pid
